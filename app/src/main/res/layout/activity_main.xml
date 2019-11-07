@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/CarLoanCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/clc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carPrice"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/carPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarLoanCalculator" />
+
+    <TextView
+        android:id="@+id/dwnPay"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/dwnPay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carPrice" />
+
+    <TextView
+        android:id="@+id/interestRate"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/interestRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dwnPay" />
+
+    <TextView
+        android:id="@+id/loanPeriod"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/loanPeriod"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRate" />
+
+    <EditText
+        android:id="@+id/inptcarPrice"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/carPrice"
+        app:layout_constraintTop_toBottomOf="@+id/CarLoanCalculator" />
+
+    <EditText
+        android:id="@+id/inptdownPay"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dwnPay"
+        app:layout_constraintTop_toBottomOf="@+id/inptcarPrice" />
+
+    <EditText
+        android:id="@+id/inptInt"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/interestRate"
+        app:layout_constraintTop_toBottomOf="@+id/inptdownPay" />
+
+    <EditText
+        android:id="@+id/inptLoan"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loanPeriod"
+        app:layout_constraintTop_toBottomOf="@+id/inptInt" />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/carloan"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/resultmargin_wide"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loanPeriod"
+        tools:text="@string/carloan" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/Interest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carloan" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="@dimen/width_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/MonthlyRepayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/resultCarloan"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/resultmargin_wide"
+        android:text="@string/resultCarloan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/carloan"
+        app:layout_constraintTop_toBottomOf="@+id/inptLoan" />
+
+    <TextView
+        android:id="@+id/resultInt"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/resultInt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/resultCarloan" />
+
+    <TextView
+        android:id="@+id/resultMonth"
+        android:layout_width="@dimen/inputwidth_wide"
+        android:layout_height="@dimen/height_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/resultMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/resultInt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

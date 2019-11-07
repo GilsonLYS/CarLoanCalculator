@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_wide">16dp</dimen>
+    <dimen name="width_wide">150dp</dimen>
+    <dimen name="inputwidth_wide">180dp</dimen>
+    <dimen name="height_wide">50dp</dimen>
+    <dimen name="resultmargin_wide">150dp</dimen>
+</resources>
